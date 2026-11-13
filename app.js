@@ -2,6 +2,7 @@ const form = document.querySelector('#new-form');
 const input = document.querySelector('#new-text');
 const list = document.querySelector('#list');
 const empty = document.querySelector('#empty');
+const count = document.querySelector('#count');
 
 const KEY = 'todo.items';
 let items = load();
@@ -48,6 +49,7 @@ function render() {
     list.append(li);
   }
   empty.hidden = items.length > 0;
+  count.textContent = `未完成 ${items.filter((item) => !item.done).length} 项`;
 }
 
 form.addEventListener('submit', (event) => {

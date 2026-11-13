@@ -15,6 +15,7 @@
   li.done span { text-decoration: line-through; color: #999; }
   li span { flex: 1; }
   .empty { color: #999; }
+  .count { color: #555; }
 </style>
 </head>
 <body>
@@ -25,6 +26,7 @@
   </form>
   <ul id="list"></ul>
   <p class="empty" id="empty">还没有待办。</p>
+  <p class="count" id="count" aria-live="polite"></p>
   <script src="app.js"></script>
 </body>
 </html>
