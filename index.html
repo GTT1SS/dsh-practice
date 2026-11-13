@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Todo</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 520px; margin: 4rem auto; padding: 0 1rem; }
+  h1 { font-size: 1.4rem; }
+  form { display: flex; gap: .5rem; }
+  input[type=text] { flex: 1; padding: .5rem; font-size: 1rem; }
+  button { padding: .5rem .9rem; font-size: 1rem; cursor: pointer; }
+  ul { list-style: none; padding: 0; }
+  li { display: flex; align-items: center; gap: .6rem; padding: .5rem 0; border-bottom: 1px solid #eee; }
+  li.done span { text-decoration: line-through; color: #999; }
+  li span { flex: 1; }
+  .empty { color: #999; }
+</style>
+</head>
+<body>
+  <h1>Todo</h1>
+  <form id="new-form">
+    <input id="new-text" type="text" placeholder="要做什么？" autocomplete="off">
+    <button type="submit">添加</button>
+  </form>
+  <ul id="list"></ul>
+  <p class="empty" id="empty">还没有待办。</p>
+  <script src="app.js"></script>
+</body>
+</html>
