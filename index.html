@@ -16,6 +16,7 @@
   li span { flex: 1; }
   .empty { color: #999; }
   .count { color: #555; }
+  .actions { display: flex; justify-content: flex-end; margin-top: 1rem; }
 </style>
 </head>
 <body>
@@ -27,6 +28,9 @@
   <ul id="list"></ul>
   <p class="empty" id="empty">还没有待办。</p>
   <p class="count" id="count" aria-live="polite"></p>
+  <div class="actions">
+    <button id="clear-completed" type="button">清除已完成</button>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
