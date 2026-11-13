@@ -2,6 +2,7 @@ const form = document.querySelector('#new-form');
 const input = document.querySelector('#new-text');
 const list = document.querySelector('#list');
 const empty = document.querySelector('#empty');
+const clearCompleted = document.querySelector('#clear-completed');
 
 const KEY = 'todo.items';
 let items = load();
@@ -56,6 +57,12 @@ form.addEventListener('submit', (event) => {
   if (!text) return;
   items.push({ text, done: false });
   input.value = '';
+  save();
+  render();
+});
+
+clearCompleted.addEventListener('click', () => {
+  items = items.filter((item) => !item.done);
   save();
   render();
 });
