@@ -3,6 +3,7 @@ const input = document.querySelector('#new-text');
 const list = document.querySelector('#list');
 const empty = document.querySelector('#empty');
 const count = document.querySelector('#count');
+const completedCount = document.querySelector('#completed-count');
 const clearCompleted = document.querySelector('#clear-completed');
 
 const KEY = 'todo.items';
@@ -50,7 +51,9 @@ function render() {
     list.append(li);
   }
   empty.hidden = items.length > 0;
-  count.textContent = `未完成 ${items.filter((item) => !item.done).length} 项`;
+  const remaining = items.filter((item) => !item.done).length;
+  count.textContent = `未完成 ${remaining} 项`;
+  completedCount.textContent = `已完成 ${items.length - remaining} 项`;
 }
 
 form.addEventListener('submit', (event) => {

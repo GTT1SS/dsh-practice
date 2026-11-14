@@ -15,7 +15,7 @@
   li.done span { text-decoration: line-through; color: #999; }
   li span { flex: 1; }
   .empty { color: #999; }
-  .count { color: #555; }
+  .counts { display: flex; gap: 1.2rem; color: #555; }
   .actions { display: flex; justify-content: flex-end; margin-top: 1rem; }
 </style>
 </head>
@@ -27,7 +27,10 @@
   </form>
   <ul id="list"></ul>
   <p class="empty" id="empty">还没有待办。</p>
-  <p class="count" id="count" aria-live="polite"></p>
+  <p class="counts" aria-live="polite">
+    <span id="count"></span>
+    <span id="completed-count"></span>
+  </p>
   <div class="actions">
     <button id="clear-completed" type="button">清除已完成</button>
   </div>
