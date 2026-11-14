@@ -16,7 +16,7 @@
   li span { flex: 1; }
   .empty { color: #999; }
   .counts { display: flex; gap: 1.2rem; color: #555; }
-  .actions { display: flex; justify-content: flex-end; margin-top: 1rem; }
+  .actions { display: flex; justify-content: flex-end; gap: .5rem; margin-top: 1rem; }
 </style>
 </head>
 <body>
@@ -32,6 +32,7 @@
     <span id="completed-count"></span>
   </p>
   <div class="actions">
+    <button id="complete-all" type="button">全部完成</button>
     <button id="clear-completed" type="button">清除已完成</button>
   </div>
   <script src="app.js"></script>
