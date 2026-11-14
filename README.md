@@ -13,7 +13,7 @@
 
 ## 运行
 
-直接双击 `index.html`，或用任意静态服务器：
+直接双击 `index.html` 即可，无需构建或安装依赖；也可以用任意静态服务器：
 
 ```sh
 python -m http.server 8080
