@@ -5,6 +5,7 @@ const empty = document.querySelector('#empty');
 const count = document.querySelector('#count');
 const completedCount = document.querySelector('#completed-count');
 const clearCompleted = document.querySelector('#clear-completed');
+const completeAll = document.querySelector('#complete-all');
 
 const KEY = 'todo.items';
 let items = load();
@@ -62,6 +63,12 @@ form.addEventListener('submit', (event) => {
   if (!text) return;
   items.push({ text, done: false });
   input.value = '';
+  save();
+  render();
+});
+
+completeAll.addEventListener('click', () => {
+  for (const item of items) item.done = true;
   save();
   render();
 });
